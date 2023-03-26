@@ -7,9 +7,17 @@ public class Timestamp implements Comparable<Timestamp> {
     parseTime(time);
   }
 
+  public int getTimeH() {
+    return timeH;
+  }
+
+  public int getTimeM() {
+    return timeM;
+  }
+
   private void parseTime(String time) {
     String[] param = time.split(":");
-    if (param.length > 2) {
+    if (param.length != 2) {
       throw new IllegalArgumentException("Некорректные входные данные!");
     }
     timeH = Integer.parseInt(param[0]);
