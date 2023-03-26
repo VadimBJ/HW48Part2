@@ -34,7 +34,7 @@ public class Timestamp implements Comparable<Timestamp> {
   }
 
   public void increaseOnHour(int diffHour) {
-    minutes += (int) (diffHour * 60);
+    minutes += diffHour * 60L;
     parseFromMinutes(minutes);
   }
 
